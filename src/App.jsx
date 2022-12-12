@@ -1,13 +1,17 @@
 import React from 'react';
+import Hero from './components/Hero';
+import { heroapi } from './data/data';
 
 function App(props) {
   return (
     <>
-      <h1 className="bg-black text-red text-white text-4xl font-bold">
-        Welcome to Nike Store Commerce Projet
-      </h1>
+      <main>
+        <Hero heroapi={heroapi} />
+      </main>
     </>
   );
 }
 
 export default App;
+
+// https://www.youtube.com/watch?v=QnykUEqAVoc 20m20s
