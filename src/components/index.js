@@ -1,3 +1,4 @@
+import {default as NavBar}  from "./NavBar.jsx";
 import {default as Hero}  from "./Hero.jsx";
 import {default as Sales} from "./Sales.jsx";
 import {default as FlexContent} from "./FlexContent.jsx";

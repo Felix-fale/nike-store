@@ -2,6 +2,7 @@ import React from 'react';
 import FlexContent from './components/FlexContent';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
+import NavBar from './components/NavBar';
 import Sales from './components/Sales';
 import Stories from './components/Stories';
 import { heroapi, popularsales, toprateslaes, highlight, sneaker, story, footerAPI } from './data/data';
@@ -10,6 +11,7 @@ function App(props) {
   return (
     <>
       <main className='flex flex-col gap-16 relative'>
+        <NavBar/>
         <Hero heroapi={heroapi} />
         <Sales endpoint={popularsales} ifExists/>
         <FlexContent endpoint={highlight} ifExists/>
