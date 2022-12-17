@@ -16,12 +16,14 @@ const CartSlice = createSlice({
       state.cartState = action.payload.cartState;
     },
     setAddItemToCart: (state, action) => {
-      state.cartItems.push(action.payload)
+      const temp = { ...action.payload, cartQuantity: 1 };
+      state.cartItems.push(temp);
     },
   },
 });
 
-export const { setOpenCart, setCloseCart,setAddItemToCart } = CartSlice.actions;
+export const { setOpenCart, setCloseCart, setAddItemToCart } =
+  CartSlice.actions;
 
 export const selectCartState = (state) => state.cart.cartState;
 
