@@ -24,11 +24,27 @@ function Carts() {
                     <CartCount onCartToggle={onCartToggle} />
 
                     {cartItems?.length === 0 ? <CartEmpty /> : <div>
-                        <div className='flex items-start justify-start flex-col gap-y-7 lg:gap-y-5 overflow-y-scroll h-[81vh] '>
-                            {cartItems?.map((item, i) =>(
+                        <div className='flex items-start justify-start flex-col gap-y-7 lg:gap-y-5 overflow-y-scroll h-[81vh] scroll-smooth scroll-hidden py-3'>
+                            {cartItems?.map((item, i) => (
                                 <CartItem key={i} item={item} />
                             ))}
                         </div>
+
+                        <div className='fixed bottom-0 bg-white w-full px-5 py-2 grid items-center'>
+                            <div className='flex items-center justify-between'>
+                                <h1 className='text-base font-semibold'>
+                                    SubTotal
+                                </h1>
+                                <h1 className='test-sm rounded bg-theme-cart text-slate-100 px-1 py-0.5'>
+                                    000
+                                </h1>
+                            </div>
+                            <div className='grid items-center gap-2'>
+                                <p className='text-sm font-medium text-center'>Taxes and Shipping Xill Calculate at Shipping</p>
+                                <button type='button' className='button-theme bg-theme-cart text-white'>Check</button>
+                            </div>
+                        </div>
+
                     </div>}
                 </div>
             </div>
