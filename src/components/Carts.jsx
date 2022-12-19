@@ -19,7 +19,9 @@ function Carts() {
     }
 
     const onClearCartItems = () =>{
-        dispatch(setClearCartItems())
+         if (confirm('Do you want to empty your cart')) {
+            dispatch(setClearCartItems());
+        }
     }
 
     return (
